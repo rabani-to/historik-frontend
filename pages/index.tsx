@@ -73,7 +73,7 @@ export default function Home() {
         <title>Historik</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout>
+      <Layout noBackButton>
         <Input placeholder="Search for a hospital or doctor" />
         <div className="flex w-full space-x-2 justify-between">
           <Action href="/doctor" Icon={AiOutlineMedicineBox}>
