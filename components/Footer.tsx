@@ -8,7 +8,7 @@ function Action({ href, Icon, children }) {
     <Link href={href}>
       <a className="flex py-4 px-2 w-1/3 hover:bg-zinc-100 flex-col space-y-2 items-center justify-center">
         <Icon className="text-2xl" />
-        <p className="text-sm">{children}</p>
+        <div className="text-sm">{children}</div>
       </a>
     </Link>
   )
