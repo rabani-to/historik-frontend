@@ -8,62 +8,62 @@ import Layout from "@/components/Layout"
 import { CiPill } from "react-icons/ci"
 import { MdOutlineMedicalServices, MdOutlineSick } from "react-icons/md"
 import { BiCommentDetail } from "react-icons/bi"
-import { FaFileMedicalAlt } from "react-icons/fa"
 import { BsFileEarmarkMedical } from "react-icons/bs"
 import Header from "@/components/Header"
+import ProfileImage from "@/components/ProfileImage"
 
-function Logo() {
-  return (
-    <div className="w-40">
-      <Image
-        src="/logo.png"
-        width={198}
-        height={49}
-        alt=""
-        layout="responsive"
-      />
-    </div>
-  )
-}
-
-export default function Dashboard() {
+export default function Create() {
   return (
     <Fragment>
       <Head>
         <title>Historik</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout className="mb-12" noFooter noBackButton>
-        <Logo />
-        <div className="mt-4" />
-        <section className="pb-2">
-          <Header>Create a new record</Header>
-          <p className="text-sm text-zinc-500">
-            There{"'"}s is a time limit of an hour to create/update this record.
-          </p>
-        </section>
-        <FormInput placeholder="Input Symptoms" Icon={MdOutlineSick}>
-          Symptoms
-        </FormInput>
-        <FormInput placeholder="Input Diagnosis" Icon={BsFileEarmarkMedical}>
-          Diagnosis
-        </FormInput>
-        <FormInput placeholder="Input Comments" Icon={BiCommentDetail}>
-          Comments
-        </FormInput>
+      <Layout
+        maxWidth="lg:max-w-4xl"
+        className="items-center justify-center"
+        noFooter
+        noBackButton
+      >
+        <div className="flex w-full">
+          <button className="flex space-x-2 pt-2 items-center">
+            <ProfileImage src="/ramon.jpg" className="w-10 h-10" />
+            <strong className="whitespace-nowrap">Agustin Gutierres</strong>
+            <div className="w-2 h-2 rounded-full bg-green-600" />
+          </button>
+        </div>
 
-        <FormInput
-          placeholder="Input Treatment"
-          Icon={MdOutlineMedicalServices}
-        >
-          Treatment
-        </FormInput>
+        <div className="pb-20 w-full flex space-y-4 flex-grow flex-col justify-center items-center">
+          <section className="pb-2 w-full">
+            <Header>Create a new record</Header>
+            <p className="text-sm text-zinc-500">
+              There{"'"}s is a time limit of an hour to create/update this
+              record.
+            </p>
+          </section>
+          <FormInput placeholder="Input Symptoms" Icon={MdOutlineSick}>
+            Symptoms
+          </FormInput>
+          <FormInput placeholder="Input Diagnosis" Icon={BsFileEarmarkMedical}>
+            Diagnosis
+          </FormInput>
+          <FormInput placeholder="Input Comments" Icon={BiCommentDetail}>
+            Comments
+          </FormInput>
 
-        <FormInput placeholder="Input Medication" Icon={CiPill}>
-          Medication
-        </FormInput>
-        <div className="mt-2" />
-        <Button>SEND TRANSACTION</Button>
+          <FormInput
+            placeholder="Input Treatment"
+            Icon={MdOutlineMedicalServices}
+          >
+            Treatment
+          </FormInput>
+
+          <FormInput placeholder="Input Medication" Icon={CiPill}>
+            Medication
+          </FormInput>
+          <div className="mt-2" />
+          <Button>SEND TRANSACTION</Button>
+        </div>
       </Layout>
     </Fragment>
   )
