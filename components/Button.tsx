@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-function Button({ children = "", isLink, href }) {
+function Button({ children = "", isLink = false, href = "" }) {
   const Container = isLink ? Link : "button"
   const className =
     "w-full text-white text-center font-bold p-4 rounded-full bg-indigo-600"

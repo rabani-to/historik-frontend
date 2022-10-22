@@ -1,7 +1,7 @@
 import { type PropsWithChildren } from "react"
-import Link from "next/link"
 import { BsArrowLeft } from "react-icons/bs"
 import Footer from "./Footer"
+import { useRouter } from "next/router"
 
 function Layout({
   children,
@@ -13,17 +13,16 @@ function Layout({
   className?: string
   noBackButton?: boolean
 }>) {
+  const { back } = useRouter()
   return (
     <main
       className={`px-4 xl:px-0 xl:max-w-sm w-full min-h-screen pt-4 mx-auto space-y-4 flex flex-col ${className}`}
     >
       {noBackButton || (
-        <Link href="/">
-          <a className="flex group items-center space-x-2">
-            <BsArrowLeft className="group-hover:-translate-x-px" />
-            <span>Back</span>
-          </a>
-        </Link>
+        <button onClick={back} className="flex group items-center space-x-2">
+          <BsArrowLeft className="group-hover:-translate-x-px" />
+          <span>Back</span>
+        </button>
       )}
       {children}
       {noFooter || <Footer />}

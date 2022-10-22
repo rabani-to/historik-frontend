@@ -1,6 +1,5 @@
-import { Fragment, InputHTMLAttributes, PropsWithChildren } from "react"
-import Head from "next/head"
-import { CgProfile } from "react-icons/cg"
+import { Fragment } from "react"
+import { FiSettings } from "react-icons/fi"
 import { BiDonateBlood, BiHomeAlt } from "react-icons/bi"
 import Link from "next/link"
 
@@ -27,8 +26,8 @@ function Footer() {
         <Action Icon={BiDonateBlood} href="/overview">
           <p className="text-sm">Overview</p>
         </Action>
-        <Action Icon={CgProfile} href="/profile">
-          <p className="text-sm">Profile</p>
+        <Action Icon={FiSettings} href="/settings">
+          <p className="text-sm">Settings</p>
         </Action>
       </footer>
     </Fragment>
