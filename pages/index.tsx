@@ -15,6 +15,8 @@ import Layout from "@/components/Layout"
 import Input from "@/components/Input"
 import RecordCard from "@/components/RecordCard"
 import ProfileImage from "@/components/ProfileImage"
+import Button from "@/components/Button"
+import { BsArrowRight } from "react-icons/bs"
 
 function InfoCard() {
   return (
@@ -30,7 +32,7 @@ function InfoCard() {
         </div>
         <div className="flex text-white items-end space-x-4 w-full justify-between">
           <div className="flex flex-col space-y-2 justify-center">
-            <div className="flex items-end space-x-1">
+            <div className="flex items-end justify-center space-x-1">
               <FaAllergies className="text-2xl" />
               <strong>3+</strong>
             </div>
@@ -38,7 +40,7 @@ function InfoCard() {
           </div>
 
           <div className="flex flex-col space-y-2 justify-center">
-            <div className="flex items-end space-x-1">
+            <div className="flex items-end justify-center space-x-1">
               <GiMilkCarton className="text-3xl" />
               <strong>3+</strong>
             </div>
@@ -46,7 +48,7 @@ function InfoCard() {
           </div>
 
           <div className="flex h-full flex-col space-y-2 justify-center">
-            <div className="flex items-end space-x-1">
+            <div className="flex items-end justify-center space-x-1">
               <MdBloodtype className="text-3xl" />
               <strong>O+</strong>
             </div>
@@ -58,7 +60,7 @@ function InfoCard() {
   )
 }
 
-function Action({ children, href, Icon }) {
+function QuickAction({ children, href, Icon }) {
   return (
     <Link href={href}>
       <a className="flex flex-col group space-y-1 justify-center items-center">
@@ -81,18 +83,18 @@ export default function Home() {
       <Layout noBackButton>
         <Input placeholder="Search for a hospital or doctor" />
         <div className="flex w-full space-x-2 justify-between">
-          <Action href="/doctor" Icon={AiOutlineMedicineBox}>
+          <QuickAction href="/doctor" Icon={AiOutlineMedicineBox}>
             Doctors
-          </Action>
-          <Action href="/hospital" Icon={RiHospitalLine}>
+          </QuickAction>
+          <QuickAction href="/hospital" Icon={RiHospitalLine}>
             Hospitals
-          </Action>
-          <Action href="/publics" Icon={GrDocumentText}>
+          </QuickAction>
+          <QuickAction href="/publics" Icon={GrDocumentText}>
             Public Data
-          </Action>
-          <Action href="/medicines" Icon={CgPill}>
+          </QuickAction>
+          <QuickAction href="/medicines" Icon={CgPill}>
             Meds
-          </Action>
+          </QuickAction>
         </div>
         <Header>Overview</Header>
         <InfoCard />
@@ -100,6 +102,15 @@ export default function Home() {
         <RecordCard withProfile="1" withDate="March 19, 23:30PM - 2022" />
         <RecordCard withProfile="1" withDate="March 19, 23:30PM - 2022" />
         <RecordCard withProfile="1" withDate="March 19, 23:30PM - 2022" />
+        <Button
+          className="group flex items-center justify-between px-6"
+          isLink
+          href="/record"
+          isSecondary
+        >
+          <span>View full record</span>
+          <BsArrowRight className="text-2xl group-hover:translate-x-px" />
+        </Button>
       </Layout>
     </Fragment>
   )

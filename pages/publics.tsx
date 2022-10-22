@@ -45,7 +45,7 @@ export default function Publics() {
             value="Sept. 17, 1980"
             Icon={FaBirthdayCake}
           />
-          <RowItem name="Allergies" value="Nuts, Peniciline" Icon={GiPeanut} />
+          <RowItem name="Allergies" value="Nuts, Penicillin" Icon={GiPeanut} />
           <RowItem name="Blood Type" value="O-" Icon={BiDonateBlood} />
           <RowItem
             name="Emergency Contact"

@@ -34,7 +34,7 @@ export default function Overview() {
           />
           <RowItem name="Weight" value="80kg" Icon={FaWeight} />
           <RowItem name="Birthday" value="Sept. 17" Icon={FaBirthdayCake} />
-          <RowItem name="Allergies" value="Nuts, Peniciline" Icon={GiPeanut} />
+          <RowItem name="Allergies" value="Nuts, Penicillin" Icon={GiPeanut} />
           <RowItem name="Blood Type" value="O-" Icon={BiDonateBlood} />
         </div>
         <Button isLink href="/publics">

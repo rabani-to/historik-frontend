@@ -1,18 +1,22 @@
 import Link from "next/link"
+import { classnames } from "@/lib/helpers"
 
-function Button({ children = "", isLink = false, href = "" }) {
+function Button({
+  children = null,
+  isSecondary = false,
+  isLink = false,
+  className = "",
+  href = "",
+}) {
   const Container = isLink ? Link : "button"
-  const className =
-    "w-full text-white text-center font-bold p-4 rounded-full bg-indigo-600"
+  const cx = classnames(
+    className,
+    "w-full text-center font-bold p-4 rounded-full",
+    isSecondary ? "hover:bg-zinc-50" : "bg-indigo-600 text-white"
+  )
   return (
-    <Container className={className} href={href}>
-      {isLink ? (
-        <a className="w-full text-white text-center font-bold p-4 rounded-full bg-indigo-600">
-          {children}
-        </a>
-      ) : (
-        children
-      )}
+    <Container className={cx} href={href}>
+      {isLink ? <a className={cx}>{children}</a> : children}
     </Container>
   )
 }

@@ -1,4 +1,4 @@
-import { Fragment } from "react"
+import { Fragment, useState } from "react"
 import Head from "next/head"
 import Image from "next/image"
 import Input from "@/components/Input"
@@ -20,16 +20,20 @@ function Logo() {
 }
 
 export default function Login() {
+  const [user, setUser] = useState("")
   return (
     <Fragment>
       <Head>
         <title>Historik</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout className="items-center justify-center" noFooter>
+      <Layout className="items-center justify-center" noFooter noBackButton>
         <Logo />
         <div className="mt-4" />
-        <Input placeholder="Input your phone number or DNI" />
+        <Input
+          onInput={({ currentTarget }) => setUser(currentTarget.value)}
+          placeholder="Input your phone number or DNI"
+        />
         <Button isLink href="/">
           LOGIN
         </Button>
