@@ -19,7 +19,7 @@ function Logo() {
   )
 }
 
-export default function Home() {
+export default function Login() {
   return (
     <Fragment>
       <Head>

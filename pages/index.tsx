@@ -76,16 +76,16 @@ export default function Home() {
       <Layout>
         <Input placeholder="Search for a hospital or doctor" />
         <div className="flex w-full space-x-2 justify-between">
-          <Action href="/doctor/1" Icon={AiOutlineMedicineBox}>
+          <Action href="/doctor" Icon={AiOutlineMedicineBox}>
             Doctor
           </Action>
-          <Action href="/doctor/1" Icon={RiHospitalLine}>
+          <Action href="/hospitals" Icon={RiHospitalLine}>
             Hospital
           </Action>
-          <Action href="/doctor/1" Icon={GrDocumentText}>
+          <Action href="/publics" Icon={GrDocumentText}>
             Public Data
           </Action>
-          <Action href="/doctor/1" Icon={CgPill}>
+          <Action href="/medicines" Icon={CgPill}>
             Meds
           </Action>
         </div>

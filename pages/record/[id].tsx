@@ -3,7 +3,7 @@ import Head from "next/head"
 import Header from "@/components/Header"
 import Layout from "@/components/Layout"
 
-export default function Overview() {
+export default function Record() {
   return (
     <Fragment>
       <Head>

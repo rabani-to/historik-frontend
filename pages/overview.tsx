@@ -21,7 +21,7 @@ export default function Overview() {
         <p>
           Your individual parameters are base on the visits with your doctors.
         </p>
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col w-full border-b border-zinc-100">
           <Record name="Name" value="Ilja Solomovs" Icon={BsFillPersonFill} />
           <Record name="Weight" value="80kg" Icon={FaWeight} />
           <Record name="Birthday" value="Sept. 17" Icon={FaBirthdayCake} />
@@ -42,7 +42,7 @@ function Record({ Icon, name, value }) {
     }
   })
   return (
-    <div className="w-full flex space-x-2 items-center border-b py-4 border-zinc-100">
+    <div className="w-full flex space-x-2 items-center border-t py-4 border-zinc-100">
       <div
         style={{
           background: color.background,

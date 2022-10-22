@@ -14,7 +14,7 @@ import Input from "@/components/Input"
 import { BsFillPersonFill } from "react-icons/bs"
 import { useState } from "react"
 
-export default function Home() {
+export default function RecordList() {
   return (
     <Fragment>
       <Head>
