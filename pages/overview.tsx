@@ -1,29 +1,23 @@
-import { Fragment } from "react"
+import { Fragment, useState } from "react"
 import Head from "next/head"
-import { CgPill } from "react-icons/cg"
-import { BiDonateBlood } from "react-icons/bi"
-import { MdArrowForwardIos } from "react-icons/md"
-import { GiMilkCarton, GiPeanut } from "react-icons/gi"
-import { FaAllergies, FaBirthdayCake, FaWeight } from "react-icons/fa"
-import { RiHospitalLine } from "react-icons/ri"
-import { GrDocumentText } from "react-icons/gr"
-import { AiOutlineMedicineBox } from "react-icons/ai"
-import Header from "@/components/Header"
-import Footer from "@/components/Footer"
-import Input from "@/components/Input"
-import { BsFillPersonFill } from "react-icons/bs"
-import { useState } from "react"
 
-export default function Home() {
+import { BsFillPersonFill } from "react-icons/bs"
+import { BiDonateBlood } from "react-icons/bi"
+import { GiPeanut } from "react-icons/gi"
+import { FaBirthdayCake, FaWeight } from "react-icons/fa"
+
+import Header from "@/components/Header"
+import Layout from "@/components/Layout"
+
+export default function Overview() {
   return (
     <Fragment>
       <Head>
         <title>Historik</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="max-w-sm w-full min-h-screen pt-4 mx-auto space-y-4 flex flex-col items-center">
-        <Input placeholder="Search for a hospital or doctor" />
-        <Header>My Record</Header>
+      <Layout>
+        <Header>Record Overview</Header>
         <p>
           Your individual parameters are base on the visits with your doctors.
         </p>
@@ -34,8 +28,7 @@ export default function Home() {
           <Record name="Allergies" value="Nuts, Peniciline" Icon={GiPeanut} />
           <Record name="Blood Type" value="O-" Icon={BiDonateBlood} />
         </div>
-        <Footer />
-      </main>
+      </Layout>
     </Fragment>
   )
 }

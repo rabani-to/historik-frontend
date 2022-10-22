@@ -3,6 +3,7 @@ import Head from "next/head"
 import Image from "next/image"
 import Input from "@/components/Input"
 import Button from "@/components/Button"
+import Layout from "@/components/Layout"
 
 function Logo() {
   return (
@@ -25,14 +26,14 @@ export default function Home() {
         <title>Historik</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="max-w-sm w-full min-h-screen py-4 mx-auto space-y-8 flex flex-col items-center justify-center">
+      <Layout className="items-center justify-center" noFooter>
         <Logo />
         <div className="mt-4" />
         <Input placeholder="Input your phone number or DNI" />
         <Button isLink href="/">
           LOGIN
         </Button>
-      </main>
+      </Layout>
     </Fragment>
   )
 }
