@@ -29,9 +29,9 @@ export default function Dashboard() {
       <Layout className="items-center justify-center" noFooter noBackButton>
         <Logo />
         <div className="mt-4" />
-        <Input placeholder="Input your phone number or DNI" />
+        <Input placeholder="Input user phone number or DNI" />
         <Button isLink href="/dashboard/create">
-          LOGIN
+          Request Data
         </Button>
       </Layout>
     </Fragment>

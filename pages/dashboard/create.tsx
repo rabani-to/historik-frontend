@@ -62,7 +62,8 @@ export default function Dashboard() {
         <FormInput placeholder="Input Medication" Icon={CiPill}>
           Medication
         </FormInput>
-        <Button>SEND</Button>
+        <div className="mt-2" />
+        <Button>SEND TRANSACTION</Button>
       </Layout>
     </Fragment>
   )
