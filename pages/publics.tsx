@@ -26,8 +26,7 @@ export default function Publics() {
             src="/tacha.jpg"
             className="w-[7rem] h-[7rem] border-white -mt-6 shadow-lg"
           />
-          <strong className="text-xl mt-2">Amerika Linares</strong>
-          <div className="flex space-x-3 pb-4 pt-1">
+          <div className="flex space-x-3 pb-4 pt-4">
             <div className="flex items-center space-x-1">
               <FaBirthdayCake />
               <span>42</span>
@@ -47,11 +46,6 @@ export default function Publics() {
           />
           <RowItem name="Allergies" value="Nuts, Penicillin" Icon={GiPeanut} />
           <RowItem name="Blood Type" value="O-" Icon={BiDonateBlood} />
-          <RowItem
-            name="Emergency Contact"
-            value="+34 609320123"
-            Icon={BsPersonFill}
-          />
         </div>
       </Layout>
     </Fragment>
